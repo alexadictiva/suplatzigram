@@ -62,7 +62,7 @@ function Modal({
         <div className="flex items-center gap-3 p-4 border-b border-border">
           <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary">
             <Image
-              src={post.user?.avatar || "https://cxdmkymlcuvfrrqmzmrp.supabase.co/storage/v1/object/public/images/profile/user.jpg"}
+              src={post.user?.avatar || `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/images/profile/user.jpg`}
               alt={post.user?.username || "default_user"}
               fill
               className="object-cover"
