@@ -62,9 +62,9 @@ export default function CreatePage() {
 
     console.log("📸 Imagen subida:", publicUrl);
 
-    // 4️⃣ Crear el post en la tabla posts_new
+    // 4️⃣ Crear el post en la tabla posts
     const { data: postData, error: postError } = await supabase
-      .from("posts_new")
+      .from("posts")
       .insert({
         user_id: userId,
         image_url: publicUrl,

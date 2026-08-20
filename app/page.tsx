@@ -53,7 +53,7 @@ function PostCard({
           <Image
             src={
               post.user?.avatar ||
-              "https://xynshcnkxdliapebmyaz.supabase.co/storage/v1/object/public/images/posts/unnamed-14.jpg"
+              "https://cxdmkymlcuvfrrqmzmrp.supabase.co/storage/v1/object/public/images/profile/user.jpg"
             }
             alt={post.user?.username || "default_user"}
             fill
@@ -128,12 +128,12 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       const { data, error } = await supabase
-        .from("posts_new")
-        .select("*")
+        .from("posts")
+        .select("id, image_url, caption, likes, created_at")
         .order("created_at", { ascending: false });
 
       if (error) {
-        console.error("Error al obtener los posts:", error);
+        //console.error("Error al obtener los posts:", error);
       } else {
         setPosts(data);
       }
