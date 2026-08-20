@@ -129,7 +129,7 @@ export default function Home() {
     const fetchPosts = async () => {
       const { data, error } = await supabase
         .from("posts")
-        .select("id, image_url, caption, likes, created_at")
+        .select("*")
         .order("created_at", { ascending: false });
 
       if (error) {
