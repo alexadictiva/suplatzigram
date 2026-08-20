@@ -22,3 +22,8 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 - [Documentación de Next.js](https://nextjs.org/docs)
 - [Documentación de Supabase](https://supabase.com/docs)
+
+## POST DATA
+
+- Recuerda crear tu propio archivo .env con tus variables de entorno
+- Tambien recuerda sustituir las referencias de la base de datos a la tuya
